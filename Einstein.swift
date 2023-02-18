@@ -11,8 +11,10 @@ if let userMass = Double(readLine()!) {
     if (userMass >= 0) {
         // calculate.
         let energy = userMass * pow(speedOfLight, 2)
+        // Round the energy.
+        let roundedEnergy = String(format: "Energy: %.3f", energy)
         // Print how many logs can fit.
-        print("The energy released is \(String.format("%.3e", energy)) joules.")
+        print("The energy released is \(roundedEnergy) joules.")
     } else {
         print("That is not a valid mass.")
     }
